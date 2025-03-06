@@ -1,0 +1,923 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Oxanium-Bold";
+  src: url("./fonts/Oxanium-Bold.woff2") format("woff2"),
+    url("./fonts/Oxanium-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oxanium-Medium";
+  src: url("./fonts/Oxanium-Medium.woff2") format("woff2"),
+    url("./fonts/Oxanium-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oxanium-SemiBold";
+  src: url("./fonts/Oxanium-SemiBold.woff2") format("woff2"),
+    url("./fonts/Oxanium-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: url("./fonts/WorkSans-Bold.woff2") format("woff2"),
+    url("./fonts/WorkSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  src: url("./fonts/WorkSans-Medium.woff2") format("woff2"),
+    url("./fonts/WorkSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("./fonts/WorkSans-Regular.woff2") format("woff2"),
+    url("./fonts/WorkSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: url("./fonts/WorkSans-SemiBold.woff2") format("woff2"),
+    url("./fonts/WorkSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.App {
+  background-color: #1c121f;
+  min-height: 400vh;
+}
+
+.App::after {
+  content: "";
+  background-image: url("./images/BackForHeader.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header {
+  position: relative;
+  z-index: 40;
+}
+
+.headerList {
+  list-style: none;
+  display: flex;
+}
+
+.headerListItem a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 50px;
+  position: relative;
+  left: 200px;
+  font-family: "WorkSans-Medium", sans-serif;
+  transition: all 0.3s;
+}
+
+.headerListItem a:hover {
+  color: #ffce4e;
+}
+
+.headerListItemLink a {
+  color: #ffce4e;
+  border-bottom: 2px solid #ffce4e;
+}
+
+.HeaderBtn {
+  padding: 15px;
+  width: 209px;
+  background-color: transparent;
+  border: 1px solid #ffce4e;
+  color: #ffce4e;
+  position: relative;
+  transform: translate3d(500px, -20px, 10px);
+  cursor: pointer;
+  font-family: "WorkSans-SemiBold", sans-serif;
+  transition: all 0.3s;
+}
+
+.HeaderBtn:hover {
+  background-color: #e7b226;
+  color: #ffff;
+}
+
+.headerList {
+  list-style: none;
+  display: flex;
+  position: relative;
+  top: 100px;
+  left: 600px;
+  max-width: 900px;
+}
+
+.HeaderImg {
+  position: relative;
+  transform: translate3d(-503px, -40px, 10px);
+  cursor: pointer;
+}
+
+.MainHeaderOfContent {
+  position: relative;
+  display: flex;
+  z-index: 20;
+}
+
+.ContentOfSellText {
+  color: #f5fbf2;
+  font-size: 85px;
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 123px;
+  max-width: 500px;
+  position: relative;
+  transform: translate3d(190px, 177px, 10px);
+}
+
+.ContentOfSellTextSpan {
+  color: #ffce4e;
+}
+
+.ContentOfSellListItem {
+  color: #fff;
+}
+
+.ContentOfSellListItemSpan {
+  color: #fff;
+}
+
+.ContentOfSellBtn {
+  max-width: 400px;
+  position: relative;
+  transform: translate3d(203px, 210px, 10px);
+}
+
+.ContentOfSellExplore {
+  padding: 12px;
+  background-color: #ffce4e;
+  color: #000000;
+  width: 152px;
+  font-family: "WorkSans-SemiBold", sans-serif;
+  font-size: 17px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.ContentOfSellExplore:hover {
+  background-color: #000000;
+  color: #e7b226;
+}
+
+.ContentOfSellCreate {
+  padding: 12px;
+  border: 1px solid #ffce4e;
+  color: #ffff;
+  width: 152px;
+  font-family: "WorkSans-SemiBold", sans-serif;
+  font-size: 17px;
+  background-color: transparent;
+  margin-left: 49px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.ContentOfSellCreate:hover {
+  border: 1px solid #fff;
+  color: #e7b226;
+}
+
+.ContentOfSellList {
+  max-width: 500px;
+  position: relative;
+  transform: translate3d(156px, 244px, 10px);
+  list-style: none;
+  display: flex;
+}
+
+.ContentOfSellListItem {
+  margin-left: 40px;
+  font-size: 47px;
+  color: #f5fbf2;
+}
+
+.ContentOfSellListItemSpan {
+  display: block;
+  font-size: 24px;
+  color: #9b9e9a;
+}
+
+.ContentOfBid {
+  background-color: #4f464e;
+  opacity: 45%;
+  width: 642px;
+  height: 729px;
+  position: relative;
+  top: 185px;
+  left: 423px;
+  z-index: 20;
+}
+
+.Card {
+  background-image: url("./images/CardOfBit.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 409px;
+  height: 517px;
+  position: relative;
+  z-index: 40;
+  left: 547px;
+  top: -448px;
+  opacity: 100%;
+}
+
+.CardOfCurrent {
+  background-image: url("./images/BackOfCurrent.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70px;
+  width: 407px;
+  position: relative;
+  right: 30px;
+  left: 4px;
+  top: 30px;
+}
+
+.CardOfCurrentContent {
+  display: flex;
+  position: relative;
+  top: 10px;
+  left: 25px;
+}
+
+.CardOfCurrentContentText {
+  color: #f5fbf2;
+
+  font-size: 18px;
+  font-family: "Oxanium-Medium", sans-serif;
+}
+
+.CardOfCurrentContentSpan {
+  display: block;
+  color: #f5fbf2;
+  font-family: "Oxanium-Bold", sans-serif;
+  font-size: 25px;
+}
+
+.CardOfCurrentContentTextTwo {
+  margin-left: 150px;
+}
+
+.CardOfCurrentContentTextOne {
+  margin-left: 20px;
+}
+
+.CardOfArtist {
+  background-color: #fff;
+  padding: 10px;
+  height: 59px;
+  width: 389px;
+  position: relative;
+  top: 367px;
+}
+
+.CardOfArtistOfText {
+  font-size: 20px;
+  font-family: "Oxanium-SemiBold", sans-serif;
+  position: relative;
+  top: 8px;
+  left: 20px;
+}
+
+.CardOfArtistOfSpan {
+  display: block;
+  font-size: 16px;
+  font-family: "WorkSans-Regular", sans-serif;
+}
+
+.CardOfArtistOfBtn {
+  background-color: #ffce4e;
+  color: #000000;
+  padding: 14px;
+  font-size: 16px;
+  width: 197px;
+  font-family: "WorkSans-Bold", sans-serif;
+  border: none;
+  position: relative;
+  left: 170px;
+  bottom: 34px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.CardOfArtistOfBtn:hover {
+  color: #e7b226;
+  background-color: #000000;
+}
+
+.ArrowOfHeader {
+  background-image: url("./images/ForArrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 784px;
+  right: 385px;
+}
+
+.arrow {
+  position: relative;
+  top: 110px;
+  left: 139px;
+}
+
+.OurPartnersList {
+  max-width: 900px;
+  display: flex;
+  position: relative;
+  left: 321px;
+  list-style: none;
+}
+
+.OurPartnersListItem {
+  margin-left: 59px;
+}
+
+.blockchain {
+  position: relative;
+  top: 10px;
+}
+
+.MainOfAuctionsOfSlider {
+  display: flex;
+}
+
+.MainOfExploreOfSlider {
+  display: flex;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.CardOfList {
+  list-style: none;
+}
+
+.PopularCardOfList {
+  list-style: none;
+}
+
+.CardOfListItem {
+  max-width: 431px;
+  height: 600px;
+  padding: 30px;
+  background-color: #3d2942;
+}
+
+.CardOfListItemExplore {
+  max-width: 431px;
+  height: 500px;
+  padding: 30px;
+  background-color: #3d2942;
+}
+
+.PopularCardOfListItem {
+  max-width: 431px;
+  height: 383px;
+  padding: 30px;
+  background-color: #3d2942;
+}
+
+.CardOfListItemOfImg {
+  width: 431px;
+  height: 359px;
+}
+
+.ExploreOfListItemOfDiv {
+  width: 412px;
+  height: 316px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ExploreOfListItemOfImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.ExploreOfListItemOfDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ExploreOfListItemOfDiv:hover::after {
+  background-color: #000000;
+  opacity: 20%;
+}
+
+.PopularCardOfListItemOfImg {
+  width: 431px;
+  height: 272px;
+}
+
+.ExploreOfListItemOfImgText {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.ExploreOfListItemOfDiv:hover .ExploreOfListItemOfImgText {
+  opacity: 1;
+}
+
+.CardOfListItemContentOfProfile {
+  display: flex;
+  margin-top: 30px;
+}
+
+.PopularCardOfListItemContentOfProfile {
+  display: flex;
+  margin-top: 30px;
+}
+
+.CardOfListItemContentOfProfileText {
+  color: #f5fbf2;
+  font-size: 21px;
+  font-family: "WorkSans-Regular", sans-serif;
+  position: relative;
+  left: 250px;
+  top: 16px;
+}
+
+.PopularCardOfListItemContentOfProfileText {
+  color: #f5fbf2;
+  font-size: 17px;
+  font-family: "WorkSans-Regular", sans-serif;
+  position: relative;
+  left: 222px;
+  top: 16px;
+}
+
+.CardOfListItemContentOfCurrent {
+  display: flex;
+  margin-top: 40px;
+}
+
+.CardOfListItemContentOfCurrentTextOne {
+  color: #f5fbf2;
+  font-size: 21px;
+  font-family: "WorkSans-Regular", sans-serif;
+}
+
+.CardOfListItemContentOfCurrentTextTwo {
+  color: #f5fbf2;
+  font-size: 21px;
+  margin-left: 200px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+}
+
+.ProfileOfImage {
+  width: 60px;
+  height: 60px;
+}
+
+.PopularProfileOfImage {
+  width: 60px;
+  height: 60px;
+}
+
+.CardOfListItemContentOfCurrentBtn {
+  position: relative;
+  top: 29px;
+  left: 110px;
+  background-color: #4c374b;
+  color: white;
+  border: 1px solid #c0a890;
+  padding: 15px 40px;
+  text-align: center;
+  font-size: 16px;
+  width: 215px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.CardOfListItemContentOfCurrentBtn:hover {
+  background-color: #fff;
+  color: #4c374b;
+}
+
+.MainOfAuctionsOfSlider {
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.MainOfPopOfSlider {
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.MainOfAuctionsOfSliderOfTitle {
+  color: #f5fbf2;
+  position: relative;
+  bottom: 200px;
+  width: 31%;
+  text-align: center;
+  white-space: nowrap;
+  height: 100px;
+  top: 110px;
+  left: 614px;
+  font-size: 45px;
+  z-index: 20;
+}
+
+.ExploreSliderOfTitle {
+  color: #f5fbf2;
+  position: relative;
+  bottom: 200px;
+  width: 31%;
+  text-align: center;
+  white-space: nowrap;
+  height: 100px;
+  top: 110px;
+  left: 614px;
+  font-size: 45px;
+  z-index: 20;
+}
+
+.PopularOfSliderOfTitle {
+  color: #f5fbf2;
+  position: relative;
+  bottom: 200px;
+  width: 31%;
+  text-align: center;
+  white-space: nowrap;
+  height: 100px;
+  top: 110px;
+  left: 614px;
+  font-size: 45px;
+  z-index: 20;
+}
+
+.MainOfAuctionsOfSliderOfTitle::before {
+  content: "";
+  position: absolute;
+  left: 82px;
+  top: 34%;
+  transform: translateY(-50%);
+  background-color: #3d2942;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  display: flex;
+}
+
+.ExploreSliderOfTitle::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 34%;
+  transform: translateY(-50%);
+  background-color: #8613a5;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  display: flex;
+}
+
+.PopularOfSliderOfTitle::before {
+  content: "";
+  position: absolute;
+  left: 82px;
+  top: 34%;
+  transform: translateY(-50%);
+  background-color: #e03054;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  display: flex;
+}
+
+.PopularOfSliderOfTitle::after {
+  content: "";
+  background-image: url("./images/BlurForPop.png");
+  top: -90px;
+  width: 405px;
+  height: 321px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 356px;
+}
+
+.MoreView {
+  position: relative;
+  top: 100px;
+  left: 780px;
+  color: #f5fbf2;
+  background-color: transparent;
+  font-size: 22px;
+  padding: 15px;
+  width: 228px;
+  border: 1px solid #ffce4e;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.MoreView:hover {
+  color: #e7b226;
+  border: 1px solid #fff;
+}
+
+.Main {
+  background-image: url("./images/bgOfLife.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1218px;
+  margin-top: 100px;
+}
+
+.MainOfWorksList {
+  list-style: none;
+  display: flex;
+  position: relative;
+  right: 92px;
+}
+
+.MainOfWorksListItem {
+  margin-left: 84px;
+}
+
+.MainOfWorksListItemText {
+  color: #ffce4e;
+  display: block;
+  font-size: 22px;
+  font-family: "WorkSans-Regular", sans-serif;
+  margin-top: 20px;
+}
+
+.MainOfWorksTitle {
+  left: 333px;
+  color: #f5fbf2;
+  font-size: 40px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+  width: 300px;
+  align-items: center;
+  position: relative;
+  bottom: 106px;
+}
+
+.MainOfWorksTitle::after {
+  content: "";
+  background-image: url("./images/BlurForWorks.png");
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -75px;
+  right: -65px;
+}
+
+.MainOfWorks {
+  max-width: 1200px;
+  margin-top: 200px;
+  margin-left: 400px;
+}
+
+.MainOfWorksListItemImg {
+  position: relative;
+  left: 21px;
+}
+
+.PopularCardOfListItemContentOfProfileTextAuthor {
+  color: #f5fbf2;
+  margin-left: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.MainOfTopOfCreators {
+  margin-top: 40px;
+}
+
+.TopOfCreatorsOfList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px;
+  margin-top: 90px;
+  margin-left: 229px;
+}
+
+.TopOfCreatorsOfDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.TopOfCreatorsOfTitle {
+  color: #f5fbf2;
+  font-size: 40px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+  width: 400px;
+  position: relative;
+  top: 20px;
+  left: 718px;
+  z-index: 20;
+}
+
+.TopOfCreatorsOfTitle::after {
+  content: "";
+  background-color: #e03054;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  right: 351px;
+  bottom: -17px;
+}
+
+.TopOfCreatorsOfListItemDiv {
+  display: flex;
+}
+
+.TopOfCreatorsOfListItemImgOfFour {
+  width: 60px;
+  height: 60px;
+}
+
+.TopOfCreatorsOfListItem {
+  background-color: #302034;
+  padding: 11px;
+  width: 584px;
+  height: 66px;
+}
+
+.TopOfCreatorsOfListItemTextOne {
+  color: #f5fbf2;
+  margin-left: 20px;
+  font-size: 22px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+  position: relative;
+  top: 10px;
+}
+
+.TopOfCreatorsOfListItemTextOneSpan {
+  color: #f5fbf2;
+  display: block;
+  font-size: 19px;
+  font-family: "WorkSans-Regular", sans-serif;
+  margin-top: 10px;
+}
+
+.TopOfCreatorsOfListItemTextTwo {
+  color: #f5fbf2;
+  margin-left: 20px;
+  font-size: 22px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+  border-left: 2px solid #49374e;
+  padding-left: 10px;
+  position: relative;
+  left: 269px;
+  top: 5px;
+}
+
+.TopOfCreatorsOfListItemTextOneSpantwo {
+  color: #f5fbf2;
+  display: block;
+  font-size: 19px;
+  font-family: "WorkSans-Regular", sans-serif;
+  margin-top: 10px;
+}
+
+.TopOfCreatorsOfListItem {
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.MainOfForm {
+  content: "";
+  background-image: url("./images/BackForForm.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1903px;
+  height: 600px;
+  margin-top: 200px;
+}
+
+.MainOfFormTitle {
+  width: 587px;
+  color: #f5fbf2;
+  font-size: 40px;
+  font-family: "Oxanium-ExtraLight", sans-serif;
+  position: relative;
+  top: 246px;
+  left: 644px;
+}
+
+.form {
+  width: 600px;
+}
+
+.formOfContentInput {
+  background-color: transparent;
+  padding: 16px;
+  width: 294px;
+  color: #f5fbf2;
+  border: 1px solid #e7b226;
+  outline: none;
+}
+
+.formOfContentInput placeholder {
+  font-size: 22px;
+  color: #a48ea9;
+  font-family: "WorkSans-Regular", sans-serif;
+}
+
+.formOfContentBtn {
+  padding: 14px;
+  width: 248px;
+  background-color: #e7b226;
+  color: #000000;
+  font-family: "WorkSans-Regular", sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.formOfContentBtn:hover {
+  background-color: #000000;
+  border: 1px solid #e7b226;
+  color: #fff;
+}
+
+.formOfContent {
+  position: relative;
+  top: 300px;
+  left: 621px;
+}
+
+/* --------------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6a11cb, #2575fc);
+  border-radius: 10px;
+}
